@@ -1,0 +1,225 @@
+body {
+    background: #F3F5FC;
+    font-family: Inter, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    width: 120px;
+    height: 48px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: row; /* Distribuye elementos en fila en pantallas grandes */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinea elementos al inicio */
+    margin: 60px; /* Espacio alrededor de los elementos */
+    width: calc(100% - 120px); /* Ajusta el ancho para acomodar el logo */
+    max-width: 1200px; /* Ancho máximo para pantallas grandes */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-area {
+    border: none;
+    color: #0A3871;
+    resize: none;
+    width: 100%;
+    max-width: 680px; /* Ocupa la mitad del contenedor en pantallas grandes */
+    height: 288px;
+    outline: none;
+    background: transparent;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 300px;
+    overflow: auto;
+}
+
+::placeholder {
+    color: #0A3871;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: center;
+}
+
+.informacion {
+    width: auto;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    background: transparent;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 15px;
+    gap: 5px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row; /* Botones en fila en pantallas grandes */
+    width: 100%;
+    max-width: 680px; /* Ancho máximo igual al área de texto */
+    gap: 10px; /* Espacio entre botones */
+}
+
+.btn-desencriptar,
+.btn-encriptar,
+.copiar {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 12px 24px; /* Ajusta el tamaño del botón */
+    width: 328px; /* Ajusta el ancho del botón */
+    border-radius: 24px;
+    height: 67px;
+    border: 1px solid darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-desencriptar {
+    background: transparent;
+    color: darkblue;
+}
+
+.btn-encriptar {
+    background: darkblue;
+    color: white;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row; /* Distribuye elementos en fila en pantallas grandes */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Alinea verticalmente */
+    margin: 60px; /* Espacio alrededor de los elementos */
+    width: 100%;
+}
+
+.contenido-blanco {
+    width: 100%;
+    max-width: 80%; /* Ancho máximo en pantallas grandes */
+    height: auto; /* Altura automática para ajustar a contenido */
+    background-color: white;
+    padding: 40px; /* Padding para más espacio interno */
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    text-align: center;
+    margin-top: 30px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.mensaje {
+    display: none;
+}
+
+.msj-titulo {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    color: #343A40;
+}
+
+.msj-texto {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #495057;
+}
+
+.copiar {
+    display: block; /* Asegura que el botón se muestre */
+    background-color: white;
+    color: darkblue;
+    border: 1px solid darkblue;
+    font-size: 16px;
+    padding: 12px 24px; /* Ajusta el tamaño del botón */
+    border-radius: 24px;
+    height: 67px; /* Asegura que el botón tenga la misma altura que los demás */
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center; /* Asegura que el texto esté centrado */
+    align-self: center; /* Centra el botón en el eje transversal del contenedor */
+}
+
+.imagen {
+    display: block;
+    width: 100%;
+    max-width: 336px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column; /* Cambia a columna en dispositivos móviles */
+        align-items: center;
+        width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+        top: 20px;
+        left: 20px;
+    }
+    
+    .informacion {
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .text-area {
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 100%; /* Ajusta el ancho para dispositivos móviles */
+    }
+
+    .botones {
+        flex-direction: column; /* Botones en columna para móviles */
+        width: 100%;
+        max-width: 100%;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contenedor {
+        margin: 20px; /* Ajusta el margen en dispositivos móviles */
+        justify-content: center; /* Centra el contenido horizontalmente */
+    }
+
+    .contenido-blanco {
+        max-width: 90%; /* Ajusta el ancho máximo en móviles para más espacio */
+        padding: 20px; /* Reduce el padding para dispositivos móviles */
+        margin-left: auto; /* Elimina el margen izquierdo */
+        margin-right: auto; /* Elimina el margen derecho */
+    }
+
+    .imagen {
+        display: none; /* Ocultado en móviles */
+    }
+}
