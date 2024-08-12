@@ -62,7 +62,7 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para má
 
 ## Contacto
 
-Para preguntas o más información, contacta a [tu email o información de contacto].
+Para preguntas o más información, contacta a mi github.
 
 ---
 
